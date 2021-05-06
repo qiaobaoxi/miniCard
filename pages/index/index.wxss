@@ -1,0 +1,5 @@
+/**index.wxss**/
+.container {
+ background: url("https://sm.ms/image/hIuNiU7bdjwetL1") 0 0 no-repeat;
+}
+
