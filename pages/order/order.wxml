@@ -1,0 +1,106 @@
+<!--pages/order/order.wxml-->
+<view class="wrap">
+  <view class="box" wx:for="{{info}}" wx:key="item">
+      <view class="title">
+        <image class="sign" src="../img/sign.png"></image>
+        <text>预约信息填写</text>
+        <button plain="true"  bindtap="FnChangeInfo" data-key="1" wx:if="{{index===0}}">+ 新增</button>
+        <button plain="true"  bindtap="FnChangeInfo" data-key="0" data-index="{{index}}" wx:if="{{index!==0}}"><image class="rubbish" src="../img/rubbish.png"></image></button>
+      </view>
+      <view class="name info">
+        <view class="header"> 
+          <image class="icon" src="../img/name.png"></image>
+          <image class="star" src="../img/star.png"></image>
+          <text>访客姓名</text>
+        </view>
+        <view>
+          <input placeholder-class="ipt" bindinput="FnGetName" model:value="{{item.name}}" data-index="{{index}}" placeholder="请输入访客姓名"/>
+        </view>
+      </view>
+      <view class="phone info">
+        <view class="header"> 
+          <image class="icon" src="../img/phone.png"></image>
+          <text>手机号码</text>
+        </view>
+        <view>
+          <input placeholder-class="ipt" type="number" model:value="{{item.phone}}" bindinput="FnGetPhone" data-index="{{index}}"  placeholder="请输入手机号"/>
+        </view>
+      </view>
+      <view class="id info">
+        <view class="header"> 
+          <image class="icon" src="../img/id.png"></image>
+          <text>证件号码</text>
+        </view>
+        <view>
+          <input placeholder-class="ipt" type="idcard" model:value="{{item.id}}"  bindinput="FnGetId" data-index="{{index}}" placeholder="请输入证件号码"/>
+        </view>
+      </view>
+      <view class="head info">
+        <view class="header"> 
+          <image class="icon" src="../img/headIcon.png"></image>
+          <text>上传照片</text>
+          <text class="num"><text class="strong">{{item.imgs.length}}</text>/3</text>
+        </view>
+        <view class="imgs">
+          <view  class="" wx:for="{{item.imgs}}" wx:for-index="idx" wx:for-item="it"  wx:key="it">
+            <image src="{{url+it}}"></image><image  class="close" bindtap="FnClose" data-index="{{index}}" data-idx="{{idx}}" src="../img/close.png"></image>
+          </view>
+          <image class="upload" bindtap="FnUpload" data-index="{{index}}" src="../img/upload.png"></image>
+        </view>
+      </view>
+      
+  </view>
+  <view class="public">
+    <view class="title">
+      <image class="sign" src="../img/sign.png"></image>
+      <image class="star" src="../img/star.png"></image>
+      <text>采访单位</text>
+    </view>
+    <view>
+          <input class="in" placeholder-class="ipt"  model:value="{{unit}}"  bindinput="FnGetUnit"  placeholder="请输入采访单位"/>
+    </view>
+  </view>
+  <view class="public">
+    <view class="title">
+      <image class="sign" src="../img/sign.png"></image>
+      <text>车牌信息</text>
+    </view>
+    <view>
+          <input class="in" placeholder-class="ipt"  model:value="{{car}}"  bindinput="FnGetCar"  placeholder="请输入车牌信息"/>
+    </view>
+  </view>
+  <view class="public">
+    <view class="title">
+      <image class="sign" src="../img/sign.png"></image>
+      <image class="star" src="../img/star.png"></image>
+      <text>采访事由</text>
+    </view>
+    <view>
+          <textarea class="txt" placeholder="请输入采访事由" model:value="{{reason}}"  bindinput="FnGetReason"  placeholder-class="ipt"/>
+    </view>
+  </view>
+  <view class="public">
+    <view class="title">
+      <image class="sign" src="../img/sign.png"></image>
+      <text>访问部门</text>
+    </view>
+    <view>
+          <input class="in" placeholder-class="ipt"  model:value="{{office}}"  bindinput="FnGetOffice"  placeholder="请输入访问部门"/>
+    </view>
+  </view>
+  <view class="public">
+    <view class="title">
+      <image class="sign" src="../img/sign.png"></image>
+      <image class="star" src="../img/star.png"></image>
+      <text>访问担当</text>
+    </view>
+    <view>
+      <picker class="in" bindchange="bindPickerChange" value="{{index}}" range="{{manager}}" range-key="{{'name'}}">
+        <view class="picker">
+          当前选择：{{manager[index].name}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <button class="submit" bindtap="FnSubmit">提交</button>
+</view>

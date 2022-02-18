@@ -1,5 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-
- 
+   <navigator url="/pages/order/order" class="btn btn1 imgPublic" ></navigator>
+   <navigator url="/pages/orderList/orderList" class="btn btn2 imgPublic"></navigator>
+   <view class="wrap" wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}"  bindtap="getUserProfile">获取用户信息</button>
+   </view>
 </view>

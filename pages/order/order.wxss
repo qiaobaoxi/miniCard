@@ -1,0 +1,159 @@
+/* pages/order/order.wxss */
+page{
+  background-color: #fbfbfb;
+}
+.public{
+  margin-top: 24rpx;
+  padding:30rpx 0;
+  background-color: white;
+  border-radius: 14rpx;
+}
+.public .title{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.public .title .sign{
+  margin-right: 22rpx;
+  width: 8rpx;
+  height: 28rpx;
+}
+.public .title text{
+  font-size: 30rpx;
+}
+.public .in{
+  margin-top: 40rpx;
+  padding-left: 28rpx;
+}
+.public .txt{
+  margin-top: 40rpx;
+  padding-left: 28rpx;
+  height: 140rpx;
+}
+
+.wrap{
+  padding:30px 28px;
+  height: 100%;
+  background-color: #fbfbfb;
+}
+.imgs{
+  margin:30rpx 40rpx;
+  display: flex;
+}
+.imgs>view{
+  position: relative;
+}
+.imgs .close{
+  position: absolute;
+  margin: 0;
+  top: -6rpx;
+  right: -6rpx;
+  width: 28rpx !important;
+  height: 28rpx !important;
+}
+.ipt{
+  color: #bbbbbb;
+  font-size: 26rpx;
+}
+.star{
+  width: 12rpx;
+  height: 12rpx;
+}
+.box{
+  margin-bottom: 30rpx;
+  position: relative;
+  padding-top: 30rpx;
+  background-color: white;
+  border-radius: 14rpx;
+}
+.box .title{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.box .title .sign{
+  margin-right: 22rpx;
+  width: 8rpx;
+  height: 28rpx;
+}
+.box .title text{
+  font-size: 30rpx;
+}
+.box .title button{
+  position: absolute;
+  right: 30rpx;
+  font-size: 26rpx;
+  color:#ff8c05;
+  border: none;
+  padding: 0;
+}
+.box .title .rubbish{
+  width: 24rpx;
+  height: 24rpx;
+}
+.box .info{
+  margin: 40rpx 30rpx 0 30rpx;
+  border-bottom: 1rpx solid #f3f5f6;
+}
+.box .info .header{
+   display: flex;
+   align-items: center;
+}
+.box .info text{
+  font-size: 28rpx;
+  color:#010101;
+}
+.box .info input{
+  margin:30rpx 0 24rpx 40rpx;
+}
+
+.box .name .icon {
+   margin-right: 16rpx;
+   width: 26rpx;
+   height: 30rpx;
+}
+.box .phone .icon {
+  margin:0 18rpx 0 4rpx;
+  width: 22rpx;
+  height: 24rpx;
+}
+.box .id .icon {
+  margin:0 15rpx 0 0rpx;
+  width: 28rpx;
+  height: 24rpx;
+}
+.box .head{
+  position: relative;
+  border: none;
+  overflow: hidden;
+}
+.box .head .icon {
+  margin:0 15rpx 0 0rpx;
+  width: 28rpx;
+  height: 24rpx;
+}
+.box .head image{
+  margin-right:20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  vertical-align: top;
+}
+.box .head .num{
+  position: absolute;
+  right: 0;
+  font-size: 26rpx;
+  color: #999999;
+}
+.box .head .strong{
+   color: black;
+}
+.submit{
+  margin-top:40rpx;
+  padding: 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #73a0ff;
+  color: white;
+  border-radius: 40rpx;
+  border:none;
+}
